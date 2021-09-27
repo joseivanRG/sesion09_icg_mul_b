@@ -1,0 +1,45 @@
+<canvas id='tablero' width=5000 height=4600></canvas>
+<script>
+    function recorte(arr){
+     ctx.beginPath();
+     ctx.moveTo(arr[0],arr[1]);
+     for(var i = 2; i< arr.length; i+=2)
+	ctx.lineTo(arr[i], arr[i+1]);
+     ctx.clip();
+    }
+    function polygon(cd,colorBorde,colorRelleno,grosor){
+     ctx.beginPath();
+     ctx.strokeStyle = colorBorde;
+     ctx.fillStyle = colorRelleno;
+     ctx.lineWidth = grosor;
+     ctx.moveTo(cd[0],cd[1]);
+     ctx.lineTo(cd[2],cd[3]);
+     ctx.lineTo(cd[4],cd[5]);
+     ctx.lineTo(cd[6],cd[7]);
+     ctx.lineTo(cd[8],cd[9]);
+     ctx.closePath();
+     ctx.stroke();
+     ctx.fill();
+    }
+   
+    var c = document.getElementById('tablero')
+    var ctx =c.getContext('2d');
+    var pentAzul=[344, 3, 538, 143, 466, 368, 222, 368, 149, 142], pentBlanco=[181, 156, 225, 302, 378, 302, 424, 156, 303, 67], rect=[12, 143, 5, 191, 543, 288, 547, 238];
+    var [rojo, azul, verde, blanco]= ['rgba(237, 38, 36)', 'rgba(0, 162, 232)','rgba(181, 230, 29)', 'rgba(255, 255, 255)'];
+    
+    ctx.arc(195, 161, 95, 0, 2*Math.PI);
+    ctx.fillStyle = (blanco);	
+    ctx.strokeStyle=('rgba(237, 38, 36)');
+
+    ctx.arc(195, 176, 160, 0, 2*Math.PI);
+    ctx.strokeStyle = ('rgba(237, 38, 36)');	
+    ctx.stroke();
+
+    polygon(pentAzul, 'blue', azul);
+    polygon(pentBlanco, 'blue', blanco);
+    polygon(rect, 'green', verde);
+    
+     
+
+
+</script>
