@@ -24,14 +24,16 @@
    
     var c = document.getElementById('tablero')
     var ctx =c.getContext('2d');
-    var pentAzul=[344, 3, 538, 143, 466, 368, 222, 368, 149, 142], pentBlanco=[181, 156, 225, 302, 378, 302, 424, 156, 303, 67], rect=[12, 143, 5, 191, 543, 288, 547, 238];
-    var [rojo, azul, verde, blanco]= ['rgba(237, 38, 36)', 'rgba(0, 162, 232)','rgba(181, 230, 29)', 'rgba(255, 255, 255)'];
+    var cuaRojo=[17,51 213, 31, 246, 324, 47, 352], cuaBlanco=[46, 106, 195, 91, 217, 253, 63, 276], triAzul=[446, 87, 365, 302, 215, 163], 
+	triBlanco=[387, 136, 357,252, 283,177], pentLila=[348, 33, 258, 123, 294, 244, 414, 261, 446, 128],
+	 pentBlanco=[347,81, 284, 140, 317, 214, 383, 218, 402, 151];
+    var [rojo, azul, verde, blanco, lila]= ['rgba(237, 38, 36)', 'rgba(63, 72, 204)','rgba(181, 230, 29)', 'rgba(255, 255, 255)', 'rgba(200, 191, 231)'];
     
     
  
 
-    polygon(pentAzul, 'blue', azul);
-    polygon(pentBlanco, 'blue', blanco);
+    polygon(cuaRojo, 'red', rojo);
+    polygon(cuaBlanco, 'red', blanco);
     polygon(rect, 'green', verde);
 
 
